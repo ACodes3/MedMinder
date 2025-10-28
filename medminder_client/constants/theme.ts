@@ -5,7 +5,8 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
+// changed to pink per UI preference
+const tintColorLight = '#ff4081';
 const tintColorDark = '#fff';
 
 export const Colors = {
