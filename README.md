@@ -1,4 +1,4 @@
-# MedMinder
+# MedMinder (Work in progress)
 
 MedMinder is a cross-platform medication management app consisting of a mobile client and a backend server. This repository contains the full project source: an Expo-based React Native client in `medminder_client/` and the server implementation in `medminder_server/`.
 
