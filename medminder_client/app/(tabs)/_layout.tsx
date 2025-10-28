@@ -26,6 +26,24 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="LogScreen"
+        options={{
+          title: "Log",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="document-text" size={26} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="ProfileScreen"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="person-circle" size={26} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

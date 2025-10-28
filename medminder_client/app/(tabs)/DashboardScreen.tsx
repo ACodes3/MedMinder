@@ -4,12 +4,13 @@ import React from "react";
 import {
   FlatList,
   Image,
-  SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 
 type Medication = {
   id: string;
@@ -104,8 +105,7 @@ const DashboardScreen: React.FC = () => {
             <Text style={styles.userName}>Alina Bon</Text>
           </View>
         </View>
-
-        <Text style={styles.title}>CREATE NEW SCHEDULE</Text>
+        <Text style={styles.title}>Your Dashboard</Text>
         <TouchableOpacity style={styles.startButton} onPress={() => router.push("/add-medication" as any)}>
           <Text style={styles.startButtonText}>Add Medication</Text>
         </TouchableOpacity>

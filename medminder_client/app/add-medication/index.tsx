@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import {
   Image,
   Platform,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -14,6 +13,7 @@ import {
   View,
 } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const AddMedicationScreen: React.FC = () => {
   const router = useRouter();
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
   // Card overlay setup
   cardWrapper: {
     position: "absolute",
-    top: 175, // overlaps header nicely
+    top: 195, // overlaps header nicely
     bottom: 0,
     left: 0,
     right: 0,
