@@ -2,12 +2,12 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { BlurView } from "expo-blur";
 import React from "react";
 import {
-    Image,
-    ImageBackground,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 type RootStackParamList = {
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     marginBottom: 35,
   },
   button: {
-    backgroundColor: "#6193f7ff",
+    backgroundColor: "#ca2d9eff",
     paddingVertical: 18,
     paddingHorizontal: 60,
     borderRadius: 30,
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
   },
   activeDot: {
-    backgroundColor: "#6193f7ff",
+    backgroundColor: "#ca2d9eff",
     width: 16,
   },
 });
