@@ -365,7 +365,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   activeFrequency: {
-    backgroundColor: "#5A31F4",
+    backgroundColor: "#ca2d9eff",
   },
   frequencyText: {
     color: "#555",
@@ -404,7 +404,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   activeDay: {
-    backgroundColor: "#5A31F4",
+    backgroundColor: "#ca2d9eff",
   },
   dayText: {
     color: "#777",
@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
     color: "#333",
   },
   addButton: {
-    backgroundColor: "#5A31F4",
+    backgroundColor: "#ca2d9eff",
     borderRadius: 30,
     paddingVertical: 16,
     marginTop: 30,
