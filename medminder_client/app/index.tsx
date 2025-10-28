@@ -1,33 +1,22 @@
-import { StackNavigationProp } from "@react-navigation/stack";
 import { BlurView } from "expo-blur";
+import { useRouter } from "expo-router";
 import React from "react";
 import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Image,
+    ImageBackground,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from "react-native";
 
-type RootStackParamList = {
-  Start: undefined;
-  Home: undefined;
-};
 
-type StartScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  "Start"
->;
+const StartScreen: React.FC = () => {
+  const router = useRouter();
 
-type Props = {
-  navigation: StartScreenNavigationProp;
-};
-
-const StartScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require("../../assets/images/gradient-bg.jpg")}
+      source={require("../assets/images/gradient-bg.jpg")}
       style={styles.background}
       resizeMode="cover"
     >
@@ -35,7 +24,7 @@ const StartScreen: React.FC<Props> = ({ navigation }) => {
       <BlurView intensity={70} tint="light" style={styles.glassContainer}>
         {/* Foreground Illustration */}
         <Image
-          source={require("../../assets/images/pill-clock.png")}
+          source={require("../assets/images/pill-clock.png")}
           style={styles.illustration}
           resizeMode="contain"
         />
@@ -50,7 +39,7 @@ const StartScreen: React.FC<Props> = ({ navigation }) => {
         {/* Button */}
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => router.push("/(tabs)/DashboardScreen")}
         >
           <Text style={styles.buttonText}>Get Started</Text>
         </TouchableOpacity>
