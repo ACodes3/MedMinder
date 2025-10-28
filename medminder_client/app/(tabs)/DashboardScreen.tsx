@@ -1,13 +1,14 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 import React from "react";
 import {
-    FlatList,
-    Image,
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  FlatList,
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 type Medication = {
@@ -57,6 +58,7 @@ const medications: Medication[] = [
 ];
 
 const DashboardScreen: React.FC = () => {
+  const router = useRouter();
   const renderItem = ({ item }: { item: Medication }) => {
     const isHighlighted = item.name === "Centrum";
     return (
@@ -104,7 +106,7 @@ const DashboardScreen: React.FC = () => {
         </View>
 
         <Text style={styles.title}>CREATE NEW SCHEDULE</Text>
-        <TouchableOpacity style={styles.startButton}>
+        <TouchableOpacity style={styles.startButton} onPress={() => router.push("/add-medication" as any)}>
           <Text style={styles.startButtonText}>Add Medication</Text>
         </TouchableOpacity>
       </LinearGradient>
