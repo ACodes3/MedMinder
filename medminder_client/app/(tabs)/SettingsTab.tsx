@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingTop: 30,
   },
   settingGroup: {
     marginBottom: 30,
