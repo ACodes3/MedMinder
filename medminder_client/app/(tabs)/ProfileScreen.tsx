@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 24,
-    paddingTop: 20,
+    paddingTop: 30,
   },
   inputGroup: {
     marginBottom: 20,
