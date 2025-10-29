@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F3F5FF",
   },
   header: {
-    height: 160,
+    height: 200,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
     justifyContent: "center",
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     backgroundColor: "#fff",
-    marginTop: -30,
+    marginTop: -50,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 24,
