@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     borderColor: "#E0E0E0",
   },
   bmiContainer: {
-    marginTop: 30,
+    marginTop: 20,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#F8F8FF",
@@ -193,6 +193,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 6,
     elevation: 3,
+    marginBottom: 20,
   },
   bmiLabel: {
     fontSize: 16,

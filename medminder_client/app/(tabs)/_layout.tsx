@@ -44,6 +44,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="SettingsTab"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="settings" size={26} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
