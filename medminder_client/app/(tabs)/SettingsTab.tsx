@@ -115,6 +115,13 @@ const SettingsTab: React.FC = () => {
 
           <TouchableOpacity style={styles.settingRow} onPress={handleLogout}>
             <View style={styles.settingLeft}>
+              <Ionicons name="trash-outline" size={22} color="#C53030" />
+              <Text style={[styles.settingText, { color: "#C53030" }]}>Delete Account</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.settingRow} onPress={handleLogout}>
+            <View style={styles.settingLeft}>
               <Ionicons name="log-out-outline" size={22} color="#C53030" />
               <Text style={[styles.settingText, { color: "#C53030" }]}>Log Out</Text>
             </View>

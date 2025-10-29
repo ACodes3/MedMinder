@@ -10,11 +10,11 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const ProfileScreen: React.FC = () => {
-  const [name, setName] = useState("Alina Bon");
-  const [age, setAge] = useState("28");
-  const [gender, setGender] = useState("Female");
-  const [height, setHeight] = useState("168"); // cm
-  const [weight, setWeight] = useState("60"); // kg
+  const [name] = useState("Alina Bon");
+  const [age] = useState("28");
+  const [gender] = useState("Female");
+  const [height] = useState("168"); // cm
+  const [weight] = useState("60"); // kg
 
   // 🧮 Automatically calculate BMI
   const bmi = useMemo(() => {
@@ -47,10 +47,7 @@ const ProfileScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Gradient Header */}
-      <LinearGradient
-        colors={["#FF8DB7", "#FFA4C7"]}
-        style={styles.header}
-      >
+      <LinearGradient colors={["#FF8DB7", "#FFA4C7"]} style={styles.header}>
         <Text style={styles.headerTitle}>Profile</Text>
       </LinearGradient>
 
@@ -64,11 +61,9 @@ const ProfileScreen: React.FC = () => {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Full Name</Text>
           <TextInput
-            style={styles.input}
+            style={styles.inputDisabled}
             value={name}
-            onChangeText={setName}
-            placeholder="Enter full name"
-            placeholderTextColor="#aaa"
+            editable={false}
           />
         </View>
 
@@ -76,12 +71,9 @@ const ProfileScreen: React.FC = () => {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Age</Text>
           <TextInput
-            style={styles.input}
+            style={styles.inputDisabled}
             value={age}
-            keyboardType="numeric"
-            onChangeText={setAge}
-            placeholder="Enter age"
-            placeholderTextColor="#aaa"
+            editable={false}
           />
         </View>
 
@@ -89,11 +81,9 @@ const ProfileScreen: React.FC = () => {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Gender</Text>
           <TextInput
-            style={styles.input}
+            style={styles.inputDisabled}
             value={gender}
-            onChangeText={setGender}
-            placeholder="Male / Female / Other"
-            placeholderTextColor="#aaa"
+            editable={false}
           />
         </View>
 
@@ -101,12 +91,9 @@ const ProfileScreen: React.FC = () => {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Height (cm)</Text>
           <TextInput
-            style={styles.input}
+            style={styles.inputDisabled}
             value={height}
-            keyboardType="numeric"
-            onChangeText={setHeight}
-            placeholder="Enter height"
-            placeholderTextColor="#aaa"
+            editable={false}
           />
         </View>
 
@@ -114,12 +101,9 @@ const ProfileScreen: React.FC = () => {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Weight (kg)</Text>
           <TextInput
-            style={styles.input}
+            style={styles.inputDisabled}
             value={weight}
-            keyboardType="numeric"
-            onChangeText={setWeight}
-            placeholder="Enter weight"
-            placeholderTextColor="#aaa"
+            editable={false}
           />
         </View>
 
@@ -172,13 +156,13 @@ const styles = StyleSheet.create({
     color: "#555",
     marginBottom: 6,
   },
-  input: {
-    backgroundColor: "#F8F8FF",
+  inputDisabled: {
+    backgroundColor: "#F1F1F5",
     borderRadius: 12,
     paddingVertical: 12,
     paddingHorizontal: 16,
     fontSize: 16,
-    color: "#222",
+    color: "#666",
     borderWidth: 1,
     borderColor: "#E0E0E0",
   },
